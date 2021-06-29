@@ -26,7 +26,18 @@ I had three options for the case study, but, in the interest of gaining more pra
 
 For the file supplied by Google, see [here](https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Case%20study%201/case1.pdf).
  
- 
+### Step 1 - Initial scenario investigation
+
+### Step 2 - Obtaining the correct data
+
+### Step 3 - Cleaning and processing the data
+
+### Step 4 - Analysis
+
+### Step 5 - Visualisation and presentation
+
+### Step 6 - Call to action
+
 <a name="case2"></a>
 ## Case Study - Guide a marketing strategy based on how users interact with fitness smart devices
 
