@@ -20,7 +20,7 @@ I had three options for the case study, but, in the interest of gaining more pra
 <a name="case1"></a>
 ## Case Study 1 - Developing a new marketing strategy to increase influx of annual memberships at a bike-sharing company
 
-<embed src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Case%20study%201/case1.pdf" width="500" height="375" type="application/pdf">
+For the file supplied by Google, see [here](https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Case%20study%201/case1.pdf).
  
  
 <a name="case2"></a>
