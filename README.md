@@ -1,0 +1,1 @@
+# wickusgoogledataanalyticscertificate2021
