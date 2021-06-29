@@ -21,7 +21,7 @@ I had three options for the case study, but, in the interest of gaining more pra
 ## Case Study 1 - Developing a new marketing strategy to increase influx of annual memberships at a bike-sharing company
 
 <p align="center">
-  <img width="240p" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/carl-nenzen-loven-igKjieyjcko-unsplash.jpg">
+  <img width="310p" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/carl-nenzen-loven-igKjieyjcko-unsplash.jpg">
 </p>
 
 For the file supplied by Google, see [here](https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Case%20study%201/case1.pdf).
