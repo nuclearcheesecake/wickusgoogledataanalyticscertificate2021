@@ -20,6 +20,10 @@ I had three options for the case study, but, in the interest of gaining more pra
 <a name="case1"></a>
 ## Case Study 1 - Developing a new marketing strategy to increase influx of annual memberships at a bike-sharing company
 
+<embed src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/tree/main/Case%20study%201" width="500" height="375" 
+ type="application/pdf">
+ 
+ 
 <a name="case2"></a>
 ## Case Study - Guide a marketing strategy based on how users interact with fitness smart devices
 
