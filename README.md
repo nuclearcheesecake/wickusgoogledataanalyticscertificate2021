@@ -13,12 +13,12 @@ To complete this certificate, I had to design and implement a case study that fo
 
 I had three options for the case study, but, in the interest of gaining more practice with my data analytics tools, I decided that all three are good applications to explore. Thus in this repositiory, you will find the following three case studies that I have completed using the methodology above:
 
-1. [Developing a new marketing strategy to increase influx of annual memberships](#case1)
+1. [Developing a new marketing strategy to increase influx of annual memberships at a bike-sharing company](#case1)
 2. [Guide a marketing strategy based on how users interact with fitness smart devices](#case2)
 3. [Case study 3](#case3)
 
 <a name="case1"></a>
-## Case Study 1 - Developing a new marketing strategy to increase influx of annual memberships
+## Case Study 1 - Developing a new marketing strategy to increase influx of annual memberships at a bike-sharing company
 
 <a name="case2"></a>
 ## Case Study - Guide a marketing strategy based on how users interact with fitness smart devices
