@@ -75,7 +75,7 @@ For this project, I will use data from June 2020 to May 2021, as this is the mos
 During my analysis, the data will be stored on my private computer, in the following folder:
 
 <p align="center">
-  <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/course.png">
+  <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_data.png">
 </p>
 
 The filepath for this folder is *C:\Users\wicka\Desktop\Google Data Analytics certification\Course 8 - Capstone project - Complete a case study\Case Study 1\Data used (pre-processed)*. I am keeping a copy of the raw, unprocessed data in this folder as a backup. I will work with the data after copying it to a folder called *Data used (working)*.
