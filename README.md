@@ -137,7 +137,7 @@ To ensure the integrity of the original data, I imported the data into Excel, wh
 For each sheet, the following two columns were added:
 
 <p align="center">
-  <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_data.png">
+  <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_weekday.png">
 </p>
 
 - **The duration of the ride**
