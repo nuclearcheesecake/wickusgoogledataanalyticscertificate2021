@@ -8,8 +8,8 @@ During some free time at university, I enrolled in the [Google Data Analytics Pr
 
 This is due to the course having a strong focus on the methodology of data analytics projects, with each phase representing an area of expertise to explore. The phases that Google suggests are:
 
-* Ask, or a preliminary analysis of the scenario
-* Prepare, or XXX
+* Ask, or a preliminary analysis of the scenario (stakeholder and problem analyses)
+* Prepare, or collecting and storing data for our specific analysis
 * Process, or cleaning and preparing the data for analysis
 * Analyse, or finding patterns and generating insights using the data
 * Share, or creating visualisations and presentations
@@ -33,6 +33,11 @@ The first two are theoretical case studies created by Google, and thus all the d
 For the file supplied by Google, see [here](https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Case%20study%201/case1.pdf).
  
 ### Step 1 - Initial scenario investigation
+
+What is the situation
+
+Who are the stakeholders, what are their expectations
+
 
 ### Step 2 - Obtaining the correct data
 
