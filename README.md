@@ -34,19 +34,33 @@ The first two are theoretical case studies created by Google, and thus all the d
 
 ### Step 1 - Initial scenario investigation
 
-In this scenario, I am a junior data analyst working for the marketing analyst team at **Cyclistic**, a bike-sharing company. This team now has the goal of guiding the future marketing program, and I was tasked with a specific question to solve:
+In this scenario, I am a junior data analyst working for the marketing analyst team at **Cyclistic**, a company in Chicago with a bike-sharing program that is important to its operation. This team now has the goal of guiding the future marketing program, and I was tasked with a specific question to answer:
 
 *How do annual members and casual rides use Cylistic bikes differently?*
 
-At the end of my analysis, I am expected to hand in a report summarising all the steps I took, and my recommendations. I will be using this space on GitHub to jot down my thoughts in this process - but if you are only interested in the final deliverable, click HERE.
+At the end of my analysis, I am expected to hand in a report summarising all the steps I took, and my recommendations for a marketing campaign. I will be using this space on GitHub to jot down my thoughts in the process of answering this question - but if you are interested only in the final deliverable, click HERE.
 
-#### What is the problem you are trying to solve?
+#### The stakeholders and important players in this project
 
-From this we generate the business task.
+**Lily Moreno** - director of marketing and my manager - she believes that maximising number of annual memberships will dicate company's future success. She is also respinsible for the development of campaigns and initiatives to promote the program.
+
+**Cyclistic executive team** - the higher-ups who are detail-oriented and will decide to approve the recommended marketing campaign.
+
+**Casual rider** - person with a single-ride or a full-day pass - aware of program and chose it for mobility needs.
+
+**Cyclistic members** - person with an annual membership - believed to be more profitable than casual riders.
+
+#### What problem am I trying to solve?
+
+The goal of this project is to rreate a marketing campaign to convert casual riders into members, since this will be more profitable for the company. Thus we are not focusing on gaining new people into the program, but rather on how we can convince existing people who are casual riders to upgrade to annual memberships.
+
+To do this, I will solve the problem of how they use the program differently than members.
+
+From this description of the problem I can generate the business task, since in the end we are interested in finding out *how we can get more people to sign up for annual memberships*, as this will increase revenue for the company.
 
 #### How can my insights drive business decisions?
 
-Here we consider key stakeholders
+Finding out how these two groups of users differ, will hopefully show us how to market at the casual riders to show them how an annual membership can benefit their needs. They might not be aware of the benefit, and will be able to use the program more effectively once upgraded.
 
 
 ### Step 2 - Obtaining the correct data
