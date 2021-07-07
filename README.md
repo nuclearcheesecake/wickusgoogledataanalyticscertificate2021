@@ -128,7 +128,7 @@ Now that the data has been loaded, and after it has been cleaned, I can use it t
 As mentioned previously, the data seems to have a lot of missing values that will be dealt with in the next step. 
 
 Since the whole population was chosen, there is a very large amount of entries in the database, which could cause Excel to be overworked. I am considering moving the data to SQL, but for now Excel seems to handle the strain well, and I want to use Excel for this case study. The slowness of operations might decrease my efficiency, but we will deal with that if it becomes a problem.
-
+<br/><br/>
 
 ### Step 3 - Cleaning and processing the data 🧹️
 
@@ -157,12 +157,12 @@ By using the WEEKDAY() function, where 1 = Sunday and 7 = Saturday, on the day t
 * **Removing duplicates**
 
 
-
+<br/><br/>
 
 ### Step 4 - Analysis 🕵️‍♂️
-
+<br/><br/>
 ### Step 5 - Visualisation and presentation ✨
-
+<br/><br/>
 ### Step 6 - Call to action 💡
 
 <a name="case2"></a>
