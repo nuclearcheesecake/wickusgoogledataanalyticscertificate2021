@@ -32,7 +32,7 @@ The first two are theoretical case studies created by Google, and thus all the d
 
 (For the scenario supplied by Google, see [here](https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Case%20study%201/case1.pdf).)
 
-### Step 1 - Initial scenario investigation 😶‍🌫️
+### Step 1 - Initial scenario investigation 👀
 
 In this scenario, I am a junior data analyst working for the marketing analyst team at **Cyclistic**, a company in Chicago with a bike-sharing program that is important to its operation. This team now has the goal of guiding the future marketing program, and I was tasked with a specific question to answer:
 
@@ -68,7 +68,7 @@ From this description of the problem I can generate the business task, since in 
 Finding out how these two groups of users differ, will hopefully show us how to market towards the casual riders to show them how an annual membership can benefit their needs. They might not be aware of the benefit, and will be able to use the program more effectively once upgraded.
 
 
-### Step 2 - Obtaining the correct data
+### Step 2 - Obtaining the correct data 👨‍🔧
 
 For this project, I will use data from June 2020 to May 2021, as this is the most recent data available at the time of analysis (July 2021). The data for this project is located in a [public data source](https://divvy-tripdata.s3.amazonaws.com/index.html). 
 
@@ -133,13 +133,13 @@ Since the whole population was chosen, there is a very large amount of entries i
 
 
 
-### Step 3 - Cleaning and processing the data
+### Step 3 - Cleaning and processing the data 👨‍⚕️
 
-### Step 4 - Analysis
+### Step 4 - Analysis 🕵️‍♂️
 
-### Step 5 - Visualisation and presentation
+### Step 5 - Visualisation and presentation 🧘‍♂️
 
-### Step 6 - Call to action
+### Step 6 - Call to action 🦸‍♂️
 
 <a name="case2"></a>
 ## Case Study 2 - Guide a marketing strategy based on how users interact with fitness smart devices
