@@ -181,6 +181,65 @@ By using the WEEKDAY() function, where 1 = Sunday and 7 = Saturday, on the day t
 
 (For the scenario supplied by Google, see [here](https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Case%20study%202/case2.pdf).)
 
+### Step 1 - Initial scenario investigation 👔
+
+* **The stakeholders and important players in this project**
+
+* **What problem am I trying to solve?**
+
+* **How can my insights drive business decisions?**
+
+<br/><br/>
+
+### Step 2 - Obtaining the correct data 📜
+
+For this project, I will use data from June 2020 to May 2021, as this is the most recent data available at the time of analysis (July 2021). The data for this project is located in a [public data source](https://divvy-tripdata.s3.amazonaws.com/index.html). 
+
+* **Storing and organising the data**
+
+
+* **Bias and credibility**
+
+Since data has been collected on both casual riders and members, it is not skewed towards one. We have data about the whole population - quite a unique situation! 
+
+We can further use the ROCCC analysis as suggested by the course to see if the data is unbiased:
+
+- Reliable ✔️ - We are using the company's own data
+- Original ✔️ - Data used is internal, original copies
+- Comprehensive ✔️ - Contains enough attributes on cyclist info to be useful
+- Current ✔️ - We obtained data from the last 12 months
+- Cited ✔️ - We are using the company's own data
+
+Thus we can say that the data we have gathered is certain to be unbiased. The results obtained can thus be seen as credible.
+
+
+* **Licensing, privacy, security and accessibility**
+
+* **Verifying the data's integrity**
+
+* **How will the data help me answer the proposed question?**
+
+* **Problems found with the data**
+
+### Step 3 - Cleaning and processing the data 🧹️
+
+* **Dealing with missing data**
+
+* **Checking for entry errors**
+
+* **Removing duplicates**
+
+* **Calculated rows**
+
+
+
+<br/><br/>
+
+### Step 4 - Analysis 🕵️‍♂️
+<br/><br/>
+### Step 5 - Visualisation and presentation ✨
+<br/><br/>
+### Step 6 - Call to action 💡
 
 <a name="case3"></a>
 ## Case Study 3 - My own case study
