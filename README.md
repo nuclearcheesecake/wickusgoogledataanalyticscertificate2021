@@ -66,7 +66,7 @@ From this description of the problem I can generate the business task, since in 
 * **How can my insights drive business decisions?**
 
 Finding out how these two groups of users differ, will hopefully show us how to market towards the casual riders to show them how an annual membership can benefit their needs. They might not be aware of the benefit, and will be able to use the program more effectively once upgraded.
-<br/>
+<br/><br/>
 
 ### Step 2 - Obtaining the correct data 📜
 
