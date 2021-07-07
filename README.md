@@ -173,7 +173,14 @@ By using the WEEKDAY() function, where 1 = Sunday and 7 = Saturday, on the day t
 ### Step 6 - Call to action 💡
 
 <a name="case2"></a>
-## Case Study 2 - Guide a marketing strategy based on how users interact with fitness smart devices
+## Case Study 2 - Guide a marketing strategy based on how users interact with fitness smart devices 
+
+<p align="center">
+  <img width="310p" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/andres-urena-V7UoMNWsYsg-unsplash.jpg">
+</p>
+
+(For the scenario supplied by Google, see [here](https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Case%20study%202/case2.pdf).)
+
 
 <a name="case3"></a>
 ## Case Study 3 - My own case study
