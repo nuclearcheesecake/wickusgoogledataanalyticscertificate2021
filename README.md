@@ -23,7 +23,7 @@ To complete the certificate, I had to design and complete a case study that impl
 
 The first two are theoretical case studies created by Google, and thus all the data was provided by them. For the last option, however, I had to find an alternative data source. Here follows my three case studies. As stated above, these case studies will implement the Google Data Analytics methodology. To further test out my toolset, I decided to attempt all 3 case studies with a primary focus on a singular tool (stated boldly in brackets above).
 
-(NOTE: Originally, I planned for CS1 to be in Excel and CS2 in SQL, but I underestimated the size of the database for CS1 and thus, during the cleaning process of CS1, Excel started getting slower, with basic operations taking a lengthy amount of time. Thus, in the interest of saving time and making my workflow more efficient, I decided to move the whole project onto SQL Server, as there is no point in going forward with Excel when SQL is more fitting for the job. The database for CS2 appears to be much smaller, thus Excel will hopefully be able to handle it. I have thus learned to thoroughly evaluate the size of my data collection before choosing a tool, and found the bounds of Excel.)
+(NOTE: Originally, I planned for CS1 to be in Excel and CS2 in SQL, but I underestimated the size of the database for CS1 and thus, during the cleaning process of CS1, Excel started getting slower, with basic operations taking a lengthy amount of time. Thus, in the interest of saving time and making my workflow more efficient, I decided to move the whole project onto SQL Developer, as there is no point in going forward with Excel when SQL is more fitting for the job. The database for CS2 appears to be much smaller, thus Excel will hopefully be able to handle it. I have thus learned to thoroughly evaluate the size of my data collection before choosing a tool, and found the bounds of Excel.)
 
 <a name="case1"></a>
 ## Case Study 1 - Developing a new marketing strategy to increase influx of annual memberships at a bike-sharing company
@@ -42,7 +42,7 @@ In this scenario, I am a junior data analyst working for the marketing analyst t
 
 At the end of my analysis, I am expected to hand in a report summarising all the steps I took, and my recommendations for a marketing campaign. I will be using this space on GitHub to jot down my thoughts in the process of answering this question - but if you are interested only in the final deliverable, click HERE.
 
-~~As explained in the introduction above, I will focus on using **Microsoft Excel** in this case study.~~ This was changed to SQL after Excel started slowing down too much.
+I started exploring the data in Excel, but my main tool changed to SQL after Excel started slowing down too much.
 
 
 * **The stakeholders and important players in this project**
@@ -85,7 +85,7 @@ During my analysis, the data will be stored on my private computer, in the follo
 The filepath for this folder is *C:\Users\wicka\Desktop\Google Data Analytics certification\Course 8 - Capstone project - Complete a case study\Case Study 1\Data used (pre-processed)*. 
 As can be seen above, the data is organised according to **yearmonth_name.csv**. These are thus all .csv files, which is rather nice, since I can import them to most tools of my choice.
 
-I am keeping a copy of the raw, unprocessed data in the folder above as a backup. I will work with the data after importing it to an Excel filed located in a folder called *Data used (working)*. Each sheet represents a different month, as can be seen here:
+I am keeping a copy of the raw, unprocessed data in the folder above as a backup. I will explore the data after importing it to an Excel filed located in a folder called *Data used (working)*. Each sheet represents a different month, as can be seen here:
 
 <p align="center">
   <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_excel.png">
@@ -111,7 +111,7 @@ Thus we can say that the data we have gathered is certain to be unbiased. The re
 
 The data can be used with the following [license](https://www.divvybikes.com/data-license-agreement).
 
-If working with sensitive data, I would password-protect my Excel sheet. But since I am on a private network with an anti-virus, and the data is just dummy data, this step will not be taken. 
+As it is a requirement of creating a schema in SQL Developer, the database automatically is password-protected. But since I am on a private network with an anti-virus, and the data is just dummy data, this step is not all that necessary. 
 
 The data, in its raw form, can be accessed [here](https://divvy-tripdata.s3.amazonaws.com/index.html). 12 files are relevant to this study - download the zip files from June 2020 to May 2021.
 
@@ -129,12 +129,22 @@ Now that the data has been loaded, and after it has been cleaned, I can use it t
 
 As mentioned previously, the data seems to have a lot of missing values that will be dealt with in the next step. 
 
-Since the whole population was chosen, there is a very large amount of entries in the database, which could cause Excel to be overworked. I am considering moving the data to SQL, but for now Excel seems to handle the strain well, and I want to use Excel for this case study. The slowness of operations might decrease my efficiency, but we will deal with that if it becomes a problem.
+Since the whole population was chosen, there is a very large amount of entries in the database, which causes Excel to be overworked. Thus I am moving the data to SQL, since the slowness of operations will decrease my efficiency.
 <br/><br/>
 
 ### Step 3 - Cleaning and processing the data 🧹️
 
-To ensure the integrity of the original data, I imported the data into Excel, where it will be processed. This ensures that the original data is not altered in my investigation. However, it is here that I decided to change my tool from Excel to SQL, as I should have done from the start. Thus I connected the 12 .csv files to
+To ensure the integrity of the original data, the .csv files in *Data (pre-processed)* will not be altered. This ensures that the original data is not altered in my investigation. Thus I connected the 12 .csv files into Oracle's SQL Developer, which I will be using to manipulate the tables with SQL. The result is the following:
+
+* **Dealing with missing data**
+
+As can be seen above, I did not import all the columns into SQL developer. The loads of empty entries I saw in the Excel version turns out to be the station ID and station name of the places where the bikes are fetched and dropped off. The stations names and IDs can be obtained from the original files if they are needed. With further consideration, I have also decided to delete the positional data (the latitude and longtitude) of the start and end station. We already have ride_length which is a metric that we can observe user engagement with, and the straight-line distance between start and end wouldn't tell us much more anyway. In other words, distance and time of travel both tell us basically the same thing - how much the user engages with the service, and time is the better metric, so we can remove distance to keep the analysis elegant.
+
+Now for missing data in the remaining columns - 
+
+* **Checking for entry errors**
+
+* **Removing duplicates**
 
 * **Calculated rows**
 
@@ -152,15 +162,6 @@ This was done by subtracting the time started from the time ended, and then form
 
 By using the WEEKDAY() function, where 1 = Sunday and 7 = Saturday, on the day that the ride started.
 
-* **Dealing with missing data**
-
-The loads of empty entries I saw in the previous phase turns out to be the station ID and station name of the places where the bikes are fetched and dropped off. These records do however still record the latitude and longtitude of both the starting and the ending station - thus we still have locational data, and for our purposes, the station names and IDs are not that important, thus I will be deleting those 4 coloumns. The stations names and IDs can be obtained from the original files if they are needed. With further consideration, I have also decided to delete the positional data (the latitude and longtitude) of the start and end station. We already have ride_length which is a metric that we can observe user engagement with, and the straight-line distance between start and end wouldn't tell us much more anyway. In other words, distance and time of travel both tell us basically the same thing - how much the user engages with the service, and time is the better metric, so we can remove distance to keep the analysis elegant.
-
-Now for missing data in the remaining columns - 
-
-* **Checking for entry errors**
-
-* **Removing duplicates**
 
 
 <br/><br/>
