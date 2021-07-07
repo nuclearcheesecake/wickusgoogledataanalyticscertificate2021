@@ -32,7 +32,7 @@ The first two are theoretical case studies created by Google, and thus all the d
 
 (For the scenario supplied by Google, see [here](https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Case%20study%201/case1.pdf).)
 
-### Step 1 - Initial scenario investigation 👀
+### Step 1 - Initial scenario investigation 👔
 
 In this scenario, I am a junior data analyst working for the marketing analyst team at **Cyclistic**, a company in Chicago with a bike-sharing program that is important to its operation. This team now has the goal of guiding the future marketing program, and I was tasked with a specific question to answer:
 
