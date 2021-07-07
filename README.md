@@ -90,6 +90,18 @@ I am keeping a copy of the raw, unprocessed data in the folder above as a backup
 
 * **Bias and credibility**
 
+Since data has been collected on both casual riders and members, it is not skewed towards one. We have data about the whole population - quite a unique situation! 
+
+We can further use the ROCCC analysis as suggested by the course to see if the data is unbiased:
+
+- Reliable ✔️ - We are using the company's own data
+- Original ✔️ - Data used is internal, original copies
+- Comprehensive ✔️ - Contains enough attributes on cyclist info to be useful
+- Current ✔️ - We obtained data from the last 12 months
+- Cited ✔️ - We are using the company's own data
+
+Thus we can say that the data we have gathered is certain to be unbiased. The results obtained can thus be seen as credible.
+
 
 * **Licensing, privacy, security and accessibility**
 
@@ -97,15 +109,24 @@ The data can be used with the following [license](https://www.divvybikes.com/dat
 
 If working with sensitive data, I would password-protect my Excel sheet. But since I am on a private network with an anti-virus, and the data is just dummy data, this step will not be taken. 
 
-The data, in its raw form, can be accessed [here](https://divvy-tripdata.s3.amazonaws.com/index.html).
+The data, in its raw form, can be accessed [here](https://divvy-tripdata.s3.amazonaws.com/index.html). 12 files are relevant to this study - download the zip files from June 2020 to May 2021.
 
 * **Verifying the data's integrity**
 
+The data was generated in-house by the company, but there seems to be a lot of missing values in certain columns. How this affects the analysis will be explored when the data is cleaned.  Replication errors won't be taken into account, since the data is sourced from the central database in the company, and the data engineers will have taken care to keep a safe original copy of the data, and furthermore protect the data from viruses.
+
+We can thus assume that the data has good integrity.
 
 * **How will the data help me answer the proposed question?**
 
+Now that the data has been loaded, and after it has been cleaned, I can use it to figure out user's preferences with the bikes, and if those preferences form trends depending on which type of rider they are. I see that there are electric bikes, docked bikes and classic bikes, which could be a nice attribute to explore. I can also explore the frequency of use, and peak times of use, and if different riders have different peak riding times. Another interesting quantity to explore is the distance that riders travel on average.
 
 * **Problems found with the data**
+
+As mentioned previously, the data seems to have a lot of missing values that will be dealt with in the next step. 
+
+Since the whole population was chosen, there is a very large amount of entries in the database, which could cause Excel to be overworked. I am considering moving the data to SQL, but for now Excel seems to handle the strain well, and I want to use Excel for this case study. The slowness of operations might decrease my efficiency, but we will deal with that if it becomes a problem.
+
 
 
 
