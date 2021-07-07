@@ -22,7 +22,7 @@ To complete the certificate, I had to design and complete a case study that impl
 3. [Case study 3 (with a focus on **R**)](#case3)
 
 The first two are theoretical case studies created by Google, and thus all the data was provided by them. For the last option, however, I had to find an alternative data source. Here follows my three case studies. As stated above, these case studies will implement the Google Data Analytics methodology. To further test out my toolset, I decided to attempt all 3 case studies with a primary focus on a singular tool (stated boldly in brackets above).
-
+\
 <a name="case1"></a>
 ## Case Study 1 - Developing a new marketing strategy to increase influx of annual memberships at a bike-sharing company
 
@@ -31,7 +31,7 @@ The first two are theoretical case studies created by Google, and thus all the d
 </p>
 
 (For the scenario supplied by Google, see [here](https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Case%20study%201/case1.pdf).)
-
+\
 ### Step 1 - Initial scenario investigation 👔
 
 In this scenario, I am a junior data analyst working for the marketing analyst team at **Cyclistic**, a company in Chicago with a bike-sharing program that is important to its operation. This team now has the goal of guiding the future marketing program, and I was tasked with a specific question to answer:
