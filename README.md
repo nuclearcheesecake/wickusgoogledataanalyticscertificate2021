@@ -45,7 +45,7 @@ At the end of my analysis, I am expected to hand in a report summarising all the
 
 **Lily Moreno** - director of marketing and my manager - she believes that maximising number of annual memberships will dicate company's future success. She is also respinsible for the development of campaigns and initiatives to promote the program.
 
-**Cyclistic executive team** - the higher-ups who are detail-oriented and will decide to approve the recommended marketing campaign.
+**Cyclistic executive team** - the higher-ups who are detail-oriented and will decide to approve the recommended marketing campaign. They are also the people who are most interested in the success of the company.
 
 **Casual rider** - person with a single-ride or a full-day pass - aware of program and chose it for mobility needs.
 
@@ -63,10 +63,42 @@ From this description of the problem I can generate the business task, since in 
 
 * **How can my insights drive business decisions?**
 
-Finding out how these two groups of users differ, will hopefully show us how to market at the casual riders to show them how an annual membership can benefit their needs. They might not be aware of the benefit, and will be able to use the program more effectively once upgraded.
+Finding out how these two groups of users differ, will hopefully show us how to market towards the casual riders to show them how an annual membership can benefit their needs. They might not be aware of the benefit, and will be able to use the program more effectively once upgraded.
 
 
 ### Step 2 - Obtaining the correct data
+
+For this project, I will use data from June 2020 to May 2021, as this is the most recent data available at the time of analysis (July 2021). The data for this project is located in a [public data source](https://divvy-tripdata.s3.amazonaws.com/index.html). 
+
+* **Storing and organising the data**
+
+During my analysis, the data will be stored on my private computer, in the following folder:
+
+<p align="center">
+  <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/course.png">
+</p>
+
+The filepath for this folder is *C:\Users\wicka\Desktop\Google Data Analytics certification\Course 8 - Capstone project - Complete a case study\Case Study 1\Data used (pre-processed)*. I am keeping a copy of the raw, unprocessed data in this folder as a backup. I will work with the data after copying it to a folder called *Data used (working)*.
+As can be seen above, the data is organised according to **yearmonth_name.csv**. These are thus all .csv files, which is rather nice, since I can import them to most tools of my choice.
+
+
+
+* **Bias and credibility**
+
+
+* **Licensing, privacy, security and accessibility**
+
+
+* **Verifying the data's integrity**
+
+
+* **How will the data help me answer the proposed question?**
+
+
+* **Problems found with the data**
+
+
+
 
 ### Step 3 - Cleaning and processing the data
 
