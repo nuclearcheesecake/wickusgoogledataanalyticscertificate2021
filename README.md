@@ -140,7 +140,7 @@ Since the whole population was chosen, there is a very large amount of entries i
 ### Step 6 - Call to action
 
 <a name="case2"></a>
-## Case Study - Guide a marketing strategy based on how users interact with fitness smart devices
+## Case Study 2 - Guide a marketing strategy based on how users interact with fitness smart devices
 
 <a name="case3"></a>
 ## Case Study 3 - My own case study
