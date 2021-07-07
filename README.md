@@ -30,13 +30,23 @@ The first two are theoretical case studies created by Google, and thus all the d
   <img width="310p" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/carl-nenzen-loven-igKjieyjcko-unsplash.jpg">
 </p>
 
-For the file supplied by Google, see [here](https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Case%20study%201/case1.pdf).
- 
+(For the scenario supplied by Google, see [here](https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Case%20study%201/case1.pdf).)
+
 ### Step 1 - Initial scenario investigation
 
-What is the situation
+In this scenario, I am a junior data analyst working for the marketing analyst team at **Cyclistic**, a bike-sharing company. This team now has the goal of guiding the future marketing program, and I was tasked with a specific question to solve:
 
-Who are the stakeholders, what are their expectations
+*How do annual members and casual rides use Cylistic bikes differently?*
+
+At the end of my analysis, I am expected to hand in a report summarising all the steps I took, and my recommendations. I will be using this space on GitHub to jot down my thoughts in this process - but if you are only interested in the final deliverable, click HERE.
+
+#### What is the problem you are trying to solve?
+
+From this we generate the business task.
+
+#### How can my insights drive business decisions?
+
+Here we consider key stakeholders
 
 
 ### Step 2 - Obtaining the correct data
