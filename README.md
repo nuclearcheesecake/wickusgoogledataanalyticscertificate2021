@@ -93,6 +93,11 @@ I am keeping a copy of the raw, unprocessed data in the folder above as a backup
 
 * **Licensing, privacy, security and accessibility**
 
+The data can be used with the following [license](https://www.divvybikes.com/data-license-agreement).
+
+If working with sensitive data, I would password-protect my Excel sheet. But since I am on a private network with an anti-virus, and the data is just dummy data, this step will not be taken. 
+
+The data, in its raw form, can be accessed [here](https://divvy-tripdata.s3.amazonaws.com/index.html).
 
 * **Verifying the data's integrity**
 
