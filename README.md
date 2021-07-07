@@ -9,7 +9,7 @@ During some free time at university, I enrolled in the [Google Data Analytics Pr
 This is due to the course having a strong focus on the methodology of data analytics projects, with each phase representing an area of expertise to explore. The phases that Google suggests are:
 
 * Ask, or a preliminary analysis of the scenario (stakeholder and problem analyses)
-* Prepare, or collecting and storing data for our specific analysis
+* Prepare, or collecting and storing data for our specific analysis and testing its bias and credibility
 * Process, or cleaning and preparing the data for analysis
 * Analyse, or finding patterns and generating insights using the data
 * Share, or creating visualisations and presentations
