@@ -32,13 +32,15 @@ The first two are theoretical case studies created by Google, and thus all the d
 
 (For the scenario supplied by Google, see [here](https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Case%20study%201/case1.pdf).)
 
-### Step 1 - Initial scenario investigation
+### Step 1 - Initial scenario investigation 😶‍🌫️
 
 In this scenario, I am a junior data analyst working for the marketing analyst team at **Cyclistic**, a company in Chicago with a bike-sharing program that is important to its operation. This team now has the goal of guiding the future marketing program, and I was tasked with a specific question to answer:
 
 *How do annual members and casual rides use Cylistic bikes differently?*
 
 At the end of my analysis, I am expected to hand in a report summarising all the steps I took, and my recommendations for a marketing campaign. I will be using this space on GitHub to jot down my thoughts in the process of answering this question - but if you are interested only in the final deliverable, click HERE.
+
+As explained in the introduction above, I will focus on using **Microsoft Excel** in this case study.
 
 
 * **The stakeholders and important players in this project**
