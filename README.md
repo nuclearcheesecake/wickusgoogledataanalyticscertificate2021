@@ -130,10 +130,26 @@ As mentioned previously, the data seems to have a lot of missing values that wil
 Since the whole population was chosen, there is a very large amount of entries in the database, which could cause Excel to be overworked. I am considering moving the data to SQL, but for now Excel seems to handle the strain well, and I want to use Excel for this case study. The slowness of operations might decrease my efficiency, but we will deal with that if it becomes a problem.
 
 
-
-
-
 ### Step 3 - Cleaning and processing the data 🧹️
+
+To ensure the integrity of the original data, I imported the data into Excel, where it will be processed. This ensures that the original data is not altered in my investigation. 
+
+For each sheet, the following two columns were added:
+
+<p align="center">
+  <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_data.png">
+</p>
+
+- **The duration of the ride**
+
+This was done by subtracting the time started from the time ended, and then formatting the row as HH:MM:SS using built-in Excel commands.
+
+- **The day of the week**
+
+By using the WEEKDAY() function, where 1 = Sunday and 7 = Saturday.
+
+
+
 
 ### Step 4 - Analysis 🕵️‍♂️
 
