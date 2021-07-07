@@ -172,6 +172,8 @@ By using the WEEKDAY() function, where 1 = Sunday and 7 = Saturday, on the day t
 <br/><br/>
 ### Step 6 - Call to action 💡
 
+<br/><br/>
+
 <a name="case2"></a>
 ## Case Study 2 - Guide a marketing strategy based on how users interact with fitness smart devices 
 
@@ -221,6 +223,9 @@ Thus we can say that the data we have gathered is certain to be unbiased. The re
 
 * **Problems found with the data**
 
+
+<br/><br/>
+
 ### Step 3 - Cleaning and processing the data 🧹️
 
 * **Dealing with missing data**
@@ -240,6 +245,8 @@ Thus we can say that the data we have gathered is certain to be unbiased. The re
 ### Step 5 - Visualisation and presentation ✨
 <br/><br/>
 ### Step 6 - Call to action 💡
+
+<br/><br/>
 
 <a name="case3"></a>
 ## Case Study 3 - My own case study
