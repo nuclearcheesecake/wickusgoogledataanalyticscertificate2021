@@ -17,11 +17,13 @@ This is due to the course having a strong focus on the methodology of data analy
 
 To complete the certificate, I had to design and complete a case study that implements this methodology, as was taught in the course. I had three options for the case study, but, in the interest of gaining more practice with my data analytics tools, I decided that all three are good applications to explore. Thus in this repositiory, you will find the following three case studies that I have completed using the methodology above:
 
-1. [Developing a new marketing strategy to increase influx of annual memberships at a bike-sharing company (with a focus on **Microsoft Excel**)](#case1)
-2. [Guide a marketing strategy based on how users interact with fitness smart devices (with a focus on **SQL**)](#case2)
+1. [Developing a new marketing strategy to increase influx of annual memberships at a bike-sharing company (with a focus on **SQL**)](#case1)
+2. [Guide a marketing strategy based on how users interact with fitness smart devices (with a focus on **Microsoft Excel**)](#case2)
 3. [Case study 3 (with a focus on **R**)](#case3)
 
 The first two are theoretical case studies created by Google, and thus all the data was provided by them. For the last option, however, I had to find an alternative data source. Here follows my three case studies. As stated above, these case studies will implement the Google Data Analytics methodology. To further test out my toolset, I decided to attempt all 3 case studies with a primary focus on a singular tool (stated boldly in brackets above).
+
+(NOTE: Originally, I planned for CS1 to be in Excel and CS2 in SQL, but I underestimated the size of the database for CS1 and thus, during the cleaning process of CS1, Excel started getting slower, with basic operations taking a lengthy amount of time. Thus, in the interest of saving time and making my workflow more efficient, I decided to move the whole project onto SQL Server, as there is no point in going forward with Excel when SQL is more fitting for the job. The database for CS2 appears to be much smaller, thus Excel will hopefully be able to handle it. I have thus learned to thoroughly evaluate the size of my data collection before choosing a tool, and found the bounds of Excel.)
 
 <a name="case1"></a>
 ## Case Study 1 - Developing a new marketing strategy to increase influx of annual memberships at a bike-sharing company
@@ -40,7 +42,7 @@ In this scenario, I am a junior data analyst working for the marketing analyst t
 
 At the end of my analysis, I am expected to hand in a report summarising all the steps I took, and my recommendations for a marketing campaign. I will be using this space on GitHub to jot down my thoughts in the process of answering this question - but if you are interested only in the final deliverable, click HERE.
 
-As explained in the introduction above, I will focus on using **Microsoft Excel** in this case study.
+~~As explained in the introduction above, I will focus on using **Microsoft Excel** in this case study.~~ This was changed to SQL after Excel started slowing down too much.
 
 
 * **The stakeholders and important players in this project**
@@ -132,7 +134,7 @@ Since the whole population was chosen, there is a very large amount of entries i
 
 ### Step 3 - Cleaning and processing the data 🧹️
 
-To ensure the integrity of the original data, I imported the data into Excel, where it will be processed. This ensures that the original data is not altered in my investigation. 
+To ensure the integrity of the original data, I imported the data into Excel, where it will be processed. This ensures that the original data is not altered in my investigation. However, it is here that I decided to change my tool from Excel to SQL, as I should have done from the start. Thus I connected the 12 .csv files to
 
 * **Calculated rows**
 
