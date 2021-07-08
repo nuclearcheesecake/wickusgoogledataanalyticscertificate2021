@@ -136,8 +136,11 @@ For each sheet, the following two columns were added:
 <p align="center">
   <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_weekday.png">
 </p>
+
 **The duration of the ride (ride_length)**
+
 This was done by subtracting the time started from the time ended, and then formatting the row as HH:MM:SS using built-in Excel commands.
+
 **The day of the week (day_of_week)**
 
 By using the WEEKDAY() function, where 1 = Sunday and 7 = Saturday, on the day that the ride started.
