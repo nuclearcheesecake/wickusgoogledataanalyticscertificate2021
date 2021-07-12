@@ -175,6 +175,8 @@ This was fixed by changing the criteria of ride_length to:
 =IF([@[ended_at]] >[@[started_at]]; [@[ended_at]] - [@[started_at]]; [@[started_at]] - [@[ended_at]])
 ```
 
+Another problem in the data is that some ride_length entries are 00:00:00, which is not logically possible. Thus I filtered those out, as they are likely due to customers hiring a bike by accident. These entries might skew the data in an unwanted direction, and can thus be removed without negatively impacting our analysis.
+
 * **Removing duplicates**
 
 For this, Excel provided me with an easy option. I just selected the "Remove Duplicates" button, and voila!
@@ -182,6 +184,10 @@ For this, Excel provided me with an easy option. I just selected the "Remove Dup
 <p align="center">
   <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_duplicates.png">
 </p>
+
+No duplicates were found in any of the sheets.
+
+Now that our data has been cleaned and saved in a usable format, we can start our analysis.
 
 <br/><br/>
 
