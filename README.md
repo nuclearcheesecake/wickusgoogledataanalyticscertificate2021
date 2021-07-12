@@ -157,11 +157,23 @@ Now for missing data in the remaining columns - for this, we will use conditiona
 
 * **Checking for entry errors**
 
-First, I checked the obvious categories which only has a finite number of values from a selection - the type of bike and the type of member. For this I used the UNIQUE() function to see if there are any values in these columns that do not fall in one of the categories, for example if someone misspelled one of the category names. I also then sorted each sheet according to ride_length, since this is the other column that would cause chaos if entires were made erroneously in the start/end columns. By sorting, I can see if there is a value at the top of bottom that stands out as an error. No data entry errors were found.
+First, I checked the obvious categories which only has a finite number of values from a selection - the type of bike and the type of member. For this I used the UNIQUE() function to see if there are any values in these columns that do not fall in one of the categories, for example if someone misspelled one of the category names. No such errors were found.
 
 <p align="center">
   <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_entry.png">
 </p>
+
+I also then sorted each sheet according to ride_length, since this is the other column that would cause chaos if entires were made erroneously in the start/end columns. By sorting, I can see if there is a value at the top of bottom that stands out as an error. And indeed there are values which needs some attention, manifesting as a series of X's. Upon further investigation, these X's are in rows where the end time is before the start time.
+
+<p align="center">
+  <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_errors.png">
+</p>
+
+This was fixed by changing the criteria of ride_length to:
+
+```
+=IF([@[ended_at]] >[@[started_at]]; [@[ended_at]] - [@[started_at]]; [@[started_at]] - [@[ended_at]])
+```
 
 * **Removing duplicates**
 
