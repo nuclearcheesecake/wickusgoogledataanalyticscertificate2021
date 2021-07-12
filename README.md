@@ -17,7 +17,7 @@ This is due to the course having a strong focus on the methodology of data analy
 
 To complete the certificate, I had to design and complete a case study that implements this methodology, as was taught in the course. I had three options for the case study, but, in the interest of gaining more practice with my data analytics tools, I decided that all three are good applications to explore. Thus in this repositiory, you will find the following three case studies that I have completed using the methodology above:
 
-1. [Developing a new marketing strategy to increase influx of annual memberships at a bike-sharing company (with a focus on **Microsoft Excel**)](#case1)
+1. [Developing a new marketing strategy to increase influx of annual memberships at a bike-sharing company (with a focus on **Microsoft Excel** and **R**)](#case1)
 2. [Guide a marketing strategy based on how users interact with fitness smart devices (with a focus on **SQL**)](#case2)
 3. [Case study 3 (with a focus on **R**)](#case3)
 
@@ -175,7 +175,7 @@ This was fixed by changing the criteria of ride_length to:
 =IF([@[ended_at]] >[@[started_at]]; [@[ended_at]] - [@[started_at]]; [@[started_at]] - [@[ended_at]])
 ```
 
-Another problem in the data is that some ride_length entries are 00:00:00, which is not logically possible. Thus I filtered those out, as they are likely due to customers hiring a bike by accident. These entries might skew the data in an unwanted direction, and can thus be removed without negatively impacting our analysis.
+Another problem in the data is that some ride_length entries are 00:00:00, which is not logically possible. Thus I filtered those out, as they are likely due to customers hiring a bike by accident and then immediately cancelling. These entries might skew the data in an unwanted direction, and can thus be removed without negatively impacting our analysis.
 
 * **Removing duplicates**
 
@@ -192,6 +192,17 @@ Now that our data has been cleaned and saved in a usable format, we can start ou
 <br/><br/>
 
 ### Step 4 - Analysis 🕵️‍♂️
+
+After waiting more than 10 minutes for Excel to sort a single sheet, I decided to do my analysis in R, since that will save me a lot of time. Thus I begin by converting all 12 sheets to seperate .csv files, and then importing them to R. For this analysis, I will be using the RStudio IDE.
+
+* **Descriptive analysis for each month**
+
+
+* **Comparing members and casual riders using pivot tables**
+
+
+* **Full-year view**
+
 <br/><br/>
 ### Step 5 - Visualisation and presentation ✨
 <br/><br/>
