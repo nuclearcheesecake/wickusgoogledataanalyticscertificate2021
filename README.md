@@ -149,7 +149,7 @@ By using the WEEKDAY() function, where 1 = Sunday and 7 = Saturday, on the day t
 
 The large amount of empty entries I saw in the previous phase are now seen to be the station ID and station name of the places where the bikes are fetched and dropped off. These columns are not essential to our study, and can thus be deleted since the stations names and IDs can be obtained from the original files if they are needed. And with further consideration, I have decided to delete the remaining positional data (the latitude and longtitude) of the start and end station as well. My logic will all these deletions are that I have calculated ride_length which is a metric that we can observe user engagement with, and the straight-line distance tha could be calculated with the locational data between start and end wouldn't tell us much more anyway. In other words, distance and time of travel both tell us basically the same thing - how much the user engages with the service, and time is the better metric, so we can remove distance to keep the analysis elegant.
 
-Now for missing data in the remaining columns - for this, we will use conditional formatting. For each sheet, I added a rule to highlight cells in a different colour if their value is empty. With this method I was able to scroll through the data and easily spot where there was open cells missing data. There was no data missing in the rows left in the spreadsheet. Afterwards, I deleted the conditional formatting rules again.
+Now for missing data in the remaining columns - for this, we will use conditional formatting. For each sheet, I added a rule to highlight cells in a different colour if their value is empty. With this method I was able to scroll through the data and easily spot where there was open cells missing data. There was no data missing in the columns left in the spreadsheet. Afterwards, I deleted the conditional formatting rules again.
 
 <p align="center">
   <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_formatting.png">
@@ -157,7 +157,19 @@ Now for missing data in the remaining columns - for this, we will use conditiona
 
 * **Checking for entry errors**
 
+First, I checked the obvious categories which only has a finite number of values from a selection - the type of bike and the type of member. For this I used the UNIQUE() function to see if there are any values in these columns that do not fall in one of the categories, for example if someone misspelled one of the category names. I also then sorted each sheet according to ride_length, since this is the other column that would cause chaos if entires were made erroneously in the start/end columns. By sorting, I can see if there is a value at the top of bottom that stands out as an error. No data entry errors were found.
+
+<p align="center">
+  <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_entry.png">
+</p>
+
 * **Removing duplicates**
+
+For this, Excel provided me with an easy option. I just selected the "Remove Duplicates" button, and voila!
+
+<p align="center">
+  <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_duplicates.png">
+</p>
 
 <br/><br/>
 
