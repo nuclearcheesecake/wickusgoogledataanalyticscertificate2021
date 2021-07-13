@@ -41,6 +41,8 @@ The first two are theoretical case studies created by Google, and thus all the d
 * [Step 5 - Visualisation and presentation ✨](#case1step5)
 * [Step 6 - Call to action 💡](#case1step6)
 
+<br/><br/>
+
 <a name="case1step1"></a>
 ### Step 1 - Initial scenario investigation 👔
 
