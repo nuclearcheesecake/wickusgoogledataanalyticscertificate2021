@@ -216,7 +216,7 @@ table(wholeyeardata$member_casual)
 
 Using the last line of code, we find that the number of riders are **1 712 446 casual riders** and **2 357 821 annual members**.
 
-Since the data types in R works differently than in Excel, we need to clean our data again. First we start by dividing the started date into its components, and then also identifying each day of the week. We should also re-calculate ride_length, since dplyr's time format is different than Excel's. The type of ride_length should then be changed to 'numeric', so that we can perform calculations on it.
+Since the data types in R works differently than in Excel, we need to clean our data again. First we start by dividing the started date into its components, and then also identifying each day of the week. We should also re-calculate ride_length, since dplyr's time format is different than Excel's, and output the value in minutes. The type of ride_length should then be changed to 'numeric', so that we can perform calculations on it.
 
 ```
 wholeyeardata$date <- as.Date(wholeyeardata$started_at)
@@ -235,7 +235,96 @@ After this, I spot that some values are negative. Thus either the start or the e
 wholeyeardata = wholeyeardata[wholeyeardata$ride_length >= 0,]
 ```
 
+Now we can start with our descriptive statistical analysis. First, we find a summary of the ride_length variable:
 
+```
+> summary(wholeyeardata$ride_length)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    0.0     8.0    14.0    26.9    26.0 54283.0 
+```
+
+The interesting values to note is the mean, which is just under 30 minutes, and the max, which is roughly 37 days.
+
+We can also find the mean and the max per type of rider:
+
+```
+> aggregate(wholeyeardata$ride_length ~ wholeyeardata$member_casual, FUN = mean)
+  wholeyeardata$member_casual wholeyeardata$ride_length
+1                      casual                  42.64020
+2                      member                  15.47444
+> aggregate(wholeyeardata$ride_length ~ wholeyeardata$member_casual, FUN = max)
+  wholeyeardata$member_casual wholeyeardata$ride_length
+1                      casual                     54283
+2                      member                     41271
+```
+
+Thus we can see that casual members on average use the service twice as long as members per trip. 
+
+We can also see the average duration of a trip per weekday, per type of rider, by using aggregate(). For this, we first sort the levels of day_of_week so that we can read them more conveniently.
+
+```
+> wholeyeardata$day_of_week <- ordered(wholeyeardata$day_of_week, levels=c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"))
+> aggregate(wholeyeardata$ride_length ~ wholeyeardata$member_casual + wholeyeardata$day_of_week, FUN = mean)
+   wholeyeardata$member_casual wholeyeardata$day_of_week wholeyeardata$ride_length
+1                       casual                    Monday                  42.16975
+2                       member                    Monday                  14.89205
+3                       casual                   Tuesday                  37.95634
+4                       member                   Tuesday                  14.54583
+5                       casual                 Wednesday                  38.26854
+6                       member                 Wednesday                  14.78333
+7                       casual                  Thursday                  39.86357
+8                       member                  Thursday                  14.58720
+9                       casual                    Friday                  40.44613
+10                      member                    Friday                  15.18263
+11                      casual                  Saturday                  44.49607
+12                      member                  Saturday                  16.95468
+13                      casual                    Sunday                  48.82607
+14                      member                    Sunday                  17.42751
+```
+
+Another way to do it is as follows, where we now also include the number of trips per rider type, and sort the data first by type of rider and then by the day of the week:
+
+```
+> wholeyeardata %>% 
++   group_by(member_casual, day_of_week) %>% 
++   summarise(number_of_trips = n(),
++             average_duration = mean(ride_length)) %>% 
++   arrange(member_casual, day_of_week)	
+`summarise()` has grouped output by 'member_casual'. You can override using the `.groups` argument.
+# A tibble: 14 x 4
+# Groups:   member_casual [2]
+   member_casual day_of_week number_of_trips average_duration
+   <chr>         <ord>                 <int>            <dbl>
+ 1 casual        Monday               188617             42.2
+ 2 casual        Tuesday              174629             38.0
+ 3 casual        Wednesday            182772             38.3
+ 4 casual        Thursday             191975             39.9
+ 5 casual        Friday               246998             40.4
+ 6 casual        Saturday             397062             44.5
+ 7 casual        Sunday               330393             48.8
+ 8 member        Monday               316044             14.9
+ 9 member        Tuesday              330049             14.5
+10 member        Wednesday            347905             14.8
+11 member        Thursday             342618             14.6
+12 member        Friday               351310             15.2
+13 member        Saturday             361377             17.0
+14 member        Sunday               308518             17.4
+```
+
+It thus seems like, in the week, members make more trips than casual riders, but with shorter duration, but where the number of trips are equitable over the weekend.
+
+We can visualise the above tibble with the following two graphs:
+
+```
+```
+
+<p align="center">
+  <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_number.png">
+</p>
+
+<p align="center">
+  <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_average.png">
+</p>
 
 <br/><br/>
 ### Step 5 - Visualisation and presentation ✨
