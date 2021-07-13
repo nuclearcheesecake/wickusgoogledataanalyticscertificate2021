@@ -175,8 +175,6 @@ This was fixed by changing the criteria of ride_length to:
 =IF([@[ended_at]] >[@[started_at]]; [@[ended_at]] - [@[started_at]]; [@[started_at]] - [@[ended_at]])
 ```
 
-Another problem in the data is that some ride_length entries are 00:00:00, which is not logically possible. Thus I filtered those out, as they are likely due to customers hiring a bike by accident and then immediately cancelling. These entries might skew the data in an unwanted direction, and can thus be removed without negatively impacting our analysis.
-
 * **Removing duplicates**
 
 For this, Excel provided me with an easy option. I just selected the "Remove Duplicates" button, and voila!
@@ -193,15 +191,37 @@ Now that our data has been cleaned and saved in a usable format, we can start ou
 
 ### Step 4 - Analysis 🕵️‍♂️
 
-After waiting more than 10 minutes for Excel to sort a single sheet, I decided to do my analysis in R, since that will save me a lot of time. Thus I begin by converting all 12 sheets to seperate .csv files, and then importing them to R. For this analysis, I will be using the RStudio IDE.
+After waiting more than 10 minutes for Excel to sort a single sheet, I decided to do my analysis in R, since that will save me a lot of time. Thus I begin by converting all 12 sheets to seperate .csv files (and numbering them 1 through 12), and then importing them to R. For this analysis, I will be using the RStudio IDE. 
 
-* **Descriptive analysis for each month**
+First, we load the data into R. After that we can combine the 12 data frames into 1 to see data for the whole year, such as how many of each type of rider there is.
 
+```
+data_202006 = read.table(file = "C:\\Users\\wicka\\Desktop\\Google Data Analytics certification\\Course 8 - Capstone project - Complete a case study\\Case Study 1\\Data used (working)\\1.csv", header = T, sep = ";")
+data_202007 = read.table(file = "C:\\Users\\wicka\\Desktop\\Google Data Analytics certification\\Course 8 - Capstone project - Complete a case study\\Case Study 1\\Data used (working)\\2.csv", header = T, sep = ";")
+data_202008 = read.table(file = "C:\\Users\\wicka\\Desktop\\Google Data Analytics certification\\Course 8 - Capstone project - Complete a case study\\Case Study 1\\Data used (working)\\3.csv", header = T, sep = ";")
+data_202009 = read.table(file = "C:\\Users\\wicka\\Desktop\\Google Data Analytics certification\\Course 8 - Capstone project - Complete a case study\\Case Study 1\\Data used (working)\\4.csv", header = T, sep = ";")
+data_202010 = read.table(file = "C:\\Users\\wicka\\Desktop\\Google Data Analytics certification\\Course 8 - Capstone project - Complete a case study\\Case Study 1\\Data used (working)\\5.csv", header = T, sep = ";")
+data_202011 = read.table(file = "C:\\Users\\wicka\\Desktop\\Google Data Analytics certification\\Course 8 - Capstone project - Complete a case study\\Case Study 1\\Data used (working)\\6.csv", header = T, sep = ";")
+data_202012 = read.table(file = "C:\\Users\\wicka\\Desktop\\Google Data Analytics certification\\Course 8 - Capstone project - Complete a case study\\Case Study 1\\Data used (working)\\7.csv", header = T, sep = ";")
+data_202101 = read.table(file = "C:\\Users\\wicka\\Desktop\\Google Data Analytics certification\\Course 8 - Capstone project - Complete a case study\\Case Study 1\\Data used (working)\\8.csv", header = T, sep = ";")
+data_202102 = read.table(file = "C:\\Users\\wicka\\Desktop\\Google Data Analytics certification\\Course 8 - Capstone project - Complete a case study\\Case Study 1\\Data used (working)\\9.csv", header = T, sep = ";")
+data_202103 = read.table(file = "C:\\Users\\wicka\\Desktop\\Google Data Analytics certification\\Course 8 - Capstone project - Complete a case study\\Case Study 1\\Data used (working)\\10.csv", header = T, sep = ";")
+data_202104 = read.table(file = "C:\\Users\\wicka\\Desktop\\Google Data Analytics certification\\Course 8 - Capstone project - Complete a case study\\Case Study 1\\Data used (working)\\11.csv", header = T, sep = ";")
+data_202105 = read.table(file = "C:\\Users\\wicka\\Desktop\\Google Data Analytics certification\\Course 8 - Capstone project - Complete a case study\\Case Study 1\\Data used (working)\\12.csv", header = T, sep = ";")
 
-* **Comparing members and casual riders using pivot tables**
+wholeyeardata = bind_rows(data_202006,data_202007,data_202008,data_202009,data_202010,data_202011,data_202012,data_202101,data_202102,data_202103,data_202104,data_202105)
 
+table(wholeyeardata$member_casual)
+```
 
-* **Full-year view**
+Using the last line of code, we find that the number of riders are:
+
+casual = 1712446
+member = 2357821
+ 
+
+Another problem in the data is that some ride_length entries are 00:00:00, which is not logically possible. Thus I filtered those out, as they are likely due to customers hiring a bike by accident and then immediately cancelling. These entries might skew the data in an unwanted direction, and can thus be removed without negatively impacting our analysis.
+
 
 <br/><br/>
 ### Step 5 - Visualisation and presentation ✨
