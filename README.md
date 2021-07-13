@@ -32,6 +32,16 @@ The first two are theoretical case studies created by Google, and thus all the d
 
 (For the scenario supplied by Google, see [here](https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Case%20study%201/case1.pdf).)
 
+### Contents of Case Study 1
+
+* [Step 1 - Initial scenario investigation 👔](#case1step1)
+* [Step 2 - Obtaining the correct data 📜](#case1step2)
+* [Step 3 - Cleaning and processing the data 🧹️](#case1step3)
+* [Step 4 - Analysis 🕵️‍♂️](#case1step4)
+* [Step 5 - Visualisation and presentation ✨](#case1step5)
+* [Step 6 - Call to action 💡](#case1step6)
+
+<a name="case1step1"></a>
 ### Step 1 - Initial scenario investigation 👔
 
 In this scenario, I am a junior data analyst working for the marketing analyst team at **Cyclistic**, a company in Chicago with a bike-sharing program that is important to its operation. This team now has the goal of guiding the future marketing program, and I was tasked with a specific question to answer:
@@ -68,6 +78,7 @@ From this description of the problem I can generate the business task, since in 
 Finding out how these two groups of users differ, will hopefully show us how to market towards the casual riders to show them how an annual membership can benefit their needs. They might not be aware of the benefit, and will be able to use the program more effectively once upgraded.
 <br/><br/>
 
+<a name="case1step2"></a>
 ### Step 2 - Obtaining the correct data 📜
 
 For this project, I will use data from June 2020 to May 2021, as this is the most recent data available at the time of analysis (July 2021). The data for this project is located in a [public data source](https://divvy-tripdata.s3.amazonaws.com/index.html). 
@@ -129,6 +140,7 @@ As mentioned previously, the data seems to have a lot of missing values that wil
 Since the whole population was chosen, there is a very large amount of entries in the database, which could cause Excel to be overworked. I am considering moving the data to SQL, but for now Excel seems to handle the strain well, and I want to use Excel for this case study. The slowness of operations might decrease my efficiency, but we will deal with that if it becomes a problem.
 <br/><br/>
 
+<a name="case1step3"></a>
 ### Step 3 - Cleaning and processing the data 🧹️
 To ensure the integrity of the original data, I imported the data into Excel, where it will be processed. This ensures that the original data is not altered in my investigation. 
 * **Calculated rows**
@@ -189,6 +201,7 @@ Now that our data has been cleaned and saved in a usable format, we can start ou
 
 <br/><br/>
 
+<a name="case1step4"></a>
 ### Step 4 - Analysis 🕵️‍♂️
 
 After waiting more than 10 minutes for Excel to sort a single sheet, I decided to do my analysis in R, since that will save me a lot of time. Thus I begin by converting all 12 sheets to seperate .csv files (and numbering them 1 through 12), and then importing them to R. For this analysis, I will be using the RStudio IDE. 
@@ -377,6 +390,8 @@ wholeyeardata %>%
 </p>
 
 <br/><br/>
+
+<a name="case1step5"></a>
 ### Step 5 - Visualisation and presentation ✨
 
 For us to visualise the newly edited data, we first need to export it from R:
@@ -394,8 +409,9 @@ write.csv(counts, file = 'C:\\Users\\wicka\\Desktop\\Google Data Analytics certi
   <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_tab2.png">
 </p>
 
-
 <br/><br/>
+
+<a name="case1step6"></a>
 ### Step 6 - Call to action 💡
 
 * **Final conclusion**
