@@ -313,18 +313,69 @@ Another way to do it is as follows, where we now also include the number of trip
 
 It thus seems like, in the week, members make more trips than casual riders, but with shorter duration, but where the number of trips are equitable over the weekend.
 
-We can visualise the above tibble with the following two graphs:
+We can visualise the above tibble with the following graphs:
 
 ```
+wholeyeardata %>% 
+  group_by(member_casual, day_of_week) %>% 
+  summarise(number_of_rides = n()
+            ,average_duration = mean(ride_length)) %>% 
+  arrange(member_casual, day_of_week)  %>% 
+  ggplot(aes(x = day_of_week, y = number_of_rides, fill = member_casual)) +
+  geom_col(position = "dodge")+
+  labs(title = "Number of rides per day of the week per type of rider")
 ```
 
 <p align="center">
   <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_number.png">
 </p>
 
+```
+wholeyeardata %>% 
+  group_by(member_casual, day_of_week) %>% 
+  summarise(number_of_rides = n()
+            ,average_duration = mean(ride_length)) %>% 
+  arrange(member_casual, day_of_week)  %>% 
+  ggplot(aes(x = day_of_week, y = average_duration, fill = member_casual)) +
+  geom_col(position = "dodge") + 
+  labs(title = "Average duration of a ride on days of the week for different riders")
+```
+
 <p align="center">
   <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_average.png">
 </p>
+
+Through the following graphs, we can also see that
+
+```
+wholeyeardata %>% 
+  group_by(member_casual, month) %>% 
+  summarise(number_of_rides = n()
+            ,average_duration = mean(ride_length)) %>% 
+  arrange(member_casual, month)  %>% 
+  ggplot(aes(x = month, y = number_of_rides, fill = member_casual)) +
+  geom_col(position = "dodge") +
+  labs(title = "Number of trips per month")
+```
+<p align="center">
+  <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_months1.png">
+</p>
+
+```
+wholeyeardata %>% 
+  group_by(member_casual, month) %>% 
+  summarise(number_of_rides = n()
+            ,average_duration = mean(ride_length)) %>% 
+  arrange(member_casual, month)  %>% 
+  ggplot(aes(x = month, y = average_duration, fill = member_casual)) +
+  geom_col(position = "dodge") + 
+  labs(title = "Average trip per month for different riders")
+```
+
+<p align="center">
+  <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_months2.png">
+</p>
+
 
 <br/><br/>
 ### Step 5 - Visualisation and presentation ✨
