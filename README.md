@@ -45,7 +45,7 @@ As explained in the introduction above, I will focus on using **Microsoft Excel*
 
 * **The stakeholders and important players in this project**
 
-**Lily Moreno** - director of marketing and my manager - she believes that maximising number of annual memberships will dicate company's future success. She is also respinsible for the development of campaigns and initiatives to promote the program.
+**Lily Moreno** - director of marketing and my manager - she believes that maximising number of annual memberships will dicate company's future success. She is also responsible for the development of campaigns and initiatives to promote the program.
 
 **Cyclistic executive team** - the higher-ups who are detail-oriented and will decide to approve the recommended marketing campaign. They are also the people who are most interested in the success of the company.
 
@@ -108,7 +108,7 @@ Thus we can say that the data we have gathered is certain to be unbiased. The re
 
 The data can be used with the following [license](https://www.divvybikes.com/data-license-agreement).
 
-As it is a requirement of creating a schema in SQL Developer, the database automatically is password-protected. But since I am on a private network with an anti-virus, and the data is just dummy data, this step is not all that necessary. 
+If working with sensitive data, I would password-protect my Excel sheet. But since I am on a private network with anti-virus software, and the data is just dummy data, this step will not be taken.
 
 The data, in its raw form, can be accessed [here](https://divvy-tripdata.s3.amazonaws.com/index.html). 12 files are relevant to this study - download the zip files from June 2020 to May 2021.
 
