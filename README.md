@@ -38,7 +38,7 @@ In this scenario, I am a junior data analyst working for the marketing analyst t
 
 *How do annual members and casual rides use Cylistic bikes differently?*
 
-At the end of my analysis, I am expected to hand in a report summarising all the steps I took, and my recommendations for a marketing campaign. I will be using this space on GitHub to jot down my thoughts in the process of answering this question - but if you are interested only in the final deliverable, click HERE.
+I will be using this space on GitHub to jot journal my exploration of this question.
 
 As explained in the introduction above, I will focus on using **Microsoft Excel** in this case study.
 
@@ -397,6 +397,14 @@ write.csv(counts, file = 'C:\\Users\\wicka\\Desktop\\Google Data Analytics certi
 
 <br/><br/>
 ### Step 6 - Call to action 💡
+
+* **Final conclusion**
+
+* **Applying these insights**
+
+* **Next steps to take**
+
+* **Additional data to expand on findings**
 
 <br/><br/>
 
