@@ -376,9 +376,25 @@ wholeyeardata %>%
   <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_months2.png">
 </p>
 
-
 <br/><br/>
 ### Step 5 - Visualisation and presentation ✨
+
+For us to visualise the newly edited data, we first need to export it from R:
+
+```
+counts <- aggregate(wholeyeardata$ride_length ~ wholeyeardata$member_casual + wholeyeardata$day_of_week, FUN = mean)
+write.csv(counts, file = 'C:\\Users\\wicka\\Desktop\\Google Data Analytics certification\\Course 8 - Capstone project - Complete a case study\\Case Study 1\\Data used (working)\\avg_ride_length.csv')
+```
+
+<p align="center">
+  <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_tab1.png">
+</p>
+
+<p align="center">
+  <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_tab2.png">
+</p>
+
+
 <br/><br/>
 ### Step 6 - Call to action 💡
 
