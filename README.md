@@ -214,13 +214,27 @@ wholeyeardata = bind_rows(data_202006,data_202007,data_202008,data_202009,data_2
 table(wholeyeardata$member_casual)
 ```
 
-Using the last line of code, we find that the number of riders are:
+Using the last line of code, we find that the number of riders are **1 712 446 casual riders** and **2 357 821 annual members**.
 
-casual = 1712446
-member = 2357821
- 
+Since the data types in R works differently than in Excel, we need to clean our data again. First we start by dividing the started date into its components, and then also identifying each day of the week. We should also re-calculate ride_length, since dplyr's time format is different than Excel's. The type of ride_length should then be changed to 'numeric', so that we can perform calculations on it.
 
-Another problem in the data is that some ride_length entries are 00:00:00, which is not logically possible. Thus I filtered those out, as they are likely due to customers hiring a bike by accident and then immediately cancelling. These entries might skew the data in an unwanted direction, and can thus be removed without negatively impacting our analysis.
+```
+wholeyeardata$date <- as.Date(wholeyeardata$started_at)
+wholeyeardata$month <- format(as.Date(wholeyeardata$date), "%m")
+wholeyeardata$day <- format(as.Date(wholeyeardata$date), "%d")
+wholeyeardata$year <- format(as.Date(wholeyeardata$date), "%Y")
+wholeyeardata$day_of_week <- format(as.Date(wholeyeardata$date), "%A")
+wholeyeardata$ride_length <- difftime(wholeyeardata$ended_at,wholeyeardata$started_at, units = "mins")
+
+wholeyeardata$ride_length <- as.numeric(as.character(wholeyeardata$ride_length))
+```
+
+After this, I spot that some values are negative. Thus either the start or the end date and time was incorrectly entered, and I can't be sure which. Thus I delete these entries. This is okay since we have more than 4 million data points, which should give us some leighway to lose data.
+
+```
+wholeyeardata = wholeyeardata[wholeyeardata$ride_length >= 0,]
+```
+
 
 
 <br/><br/>
