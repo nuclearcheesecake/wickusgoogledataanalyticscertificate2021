@@ -18,8 +18,8 @@ This is due to the course having a strong focus on the methodology of data analy
 To complete the certificate, I had to design and complete a case study that implements this methodology, as was taught in the course. I had three options for the case study, but, in the interest of gaining more practice with my data analytics tools, I decided that all three are good applications to explore. Thus in this repositiory, you will find the following three case studies that I have completed using the methodology above:
 
 1. [Developing a new marketing strategy to increase influx of annual memberships at a bike-sharing company (with a focus on **Microsoft Excel** and **R**)](#case1)
-2. [Guide a marketing strategy based on how users interact with fitness smart devices (with a focus on **SQL**)](#case2)
-3. [Case study 3 (with a focus on **R**)](#case3)
+2. [Guide a marketing strategy based on how users interact with fitness smart devices (with a focus on **SQL**) - WORK IN PROGRESS](#case2)
+3. [Case study 3 (with a focus on **R**)  - WORK IN PROGRESS](#case3)
 
 The first two are theoretical case studies created by Google, and thus all the data was provided by them. For the last option, however, I had to find an alternative data source. Here follows my three case studies. As stated above, these case studies will implement the Google Data Analytics methodology. To further test out my toolset, I decided to attempt all 3 case studies with a primary focus on a singular tool (stated boldly in brackets above).
 
@@ -40,9 +40,7 @@ The first two are theoretical case studies created by Google, and thus all the d
 * [Step 4 - Analysis 🕵️‍♂️](#case1step4)
 * [Step 5 - Visualisation and presentation ✨](#case1step5)
 * [Step 6 - Call to action 💡](#case1step6)
-
 <br/><br/>
-
 <a name="case1step1"></a>
 ### Step 1 - Initial scenario investigation 👔
 
@@ -50,9 +48,9 @@ In this scenario, I am a junior data analyst working for the marketing analyst t
 
 *How do annual members and casual rides use Cylistic bikes differently?*
 
-I will be using this space on GitHub to jot journal my exploration of this question.
+I will be using this space on GitHub to journal my exploration of this question.
 
-As explained in the introduction above, I will focus on using **Microsoft Excel** in this case study.
+As explained in the introduction above, I will focus on using **Microsoft Excel** in this case study, however as will be evident later, I was only able to use it for data cleaning, and then used **R** for data analysis. I also use **Tableau** for some data visualisations.
 
 
 * **The stakeholders and important players in this project**
@@ -83,7 +81,7 @@ Finding out how these two groups of users differ, will hopefully show us how to 
 <a name="case1step2"></a>
 ### Step 2 - Obtaining the correct data 📜
 
-For this project, I will use data from June 2020 to May 2021, as this is the most recent data available at the time of analysis (July 2021). The data for this project is located in a [public data source](https://divvy-tripdata.s3.amazonaws.com/index.html). 
+For this project, I will use company data from June 2020 to May 2021, as this is the most recent data available at the time of analysis (July 2021). The data for this project is located in a [public data source](https://divvy-tripdata.s3.amazonaws.com/index.html). 
 
 * **Storing and organising the data**
 
@@ -146,6 +144,7 @@ Since the whole population was chosen, there is a very large amount of entries i
 ### Step 3 - Cleaning and processing the data 🧹️
 To ensure the integrity of the original data, I imported the data into Excel, where it will be processed. This ensures that the original data is not altered in my investigation. 
 * **Calculated rows**
+
 For each sheet, the following two columns were added:
 <p align="center">
   <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_weekday.png">
@@ -161,7 +160,7 @@ By using the WEEKDAY() function, where 1 = Sunday and 7 = Saturday, on the day t
 
 * **Dealing with missing data**
 
-The large amount of empty entries I saw in the previous phase are now seen to be the station ID and station name of the places where the bikes are fetched and dropped off. These columns are not essential to our study, and can thus be deleted since the stations names and IDs can be obtained from the original files if they are needed. And with further consideration, I have decided to delete the remaining positional data (the latitude and longtitude) of the start and end station as well. My logic will all these deletions are that I have calculated ride_length which is a metric that we can observe user engagement with, and the straight-line distance tha could be calculated with the locational data between start and end wouldn't tell us much more anyway. In other words, distance and time of travel both tell us basically the same thing - how much the user engages with the service, and time is the better metric, so we can remove distance to keep the analysis elegant.
+The large amount of empty entries I saw in the previous phase are now seen to be the station ID and station name of the places where the bikes are fetched and dropped off. These columns are not essential to our study, and can thus be deleted since the stations names and IDs can be obtained from the original files if they are needed. And with further consideration, I have decided to delete the remaining positional data (the latitude and longtitude) of the start and end station as well. My logic will all these deletions are that I have calculated ride_length which is a metric that we can observe user engagement with, and the straight-line distance that could be calculated with the locational data between start and end wouldn't tell us much more anyway. In other words, distance and time of travel both tell us basically the same thing - how much the user engages with the service, and time is the better metric, so we can remove distance to keep the analysis elegant.
 
 Now for missing data in the remaining columns - for this, we will use conditional formatting. For each sheet, I added a rule to highlight cells in a different colour if their value is empty. With this method I was able to scroll through the data and easily spot where there was open cells missing data. There was no data missing in the columns left in the spreadsheet. Afterwards, I deleted the conditional formatting rules again.
 
@@ -273,7 +272,7 @@ We can also find the mean and the max per type of rider:
 2                      member                     41271
 ```
 
-Thus we can see that casual members on average use the service twice as long as members per trip. 
+Thus we can see that casual members on average use the service twice as long as members per trip. This can be used by mrs. Moreno to show to her bosses why we need to market to casual riders, since they make up less than half of the current riders, but use the service roughly twice as long on average.
 
 We can also see the average duration of a trip per weekday, per type of rider, by using aggregate(). For this, we first sort the levels of day_of_week so that we can read them more conveniently.
 
@@ -297,7 +296,7 @@ We can also see the average duration of a trip per weekday, per type of rider, b
 14                      member                    Sunday                  17.42751
 ```
 
-Another way to do it is as follows, where we now also include the number of trips per rider type, and sort the data first by type of rider and then by the day of the week:
+Another way to do it is with pipe operators, where we can now also include the number of trips per rider type, and sort the data first by type of rider and then by the day of the week:
 
 ```
 > wholeyeardata %>% 
@@ -328,7 +327,7 @@ Another way to do it is as follows, where we now also include the number of trip
 
 It thus seems like, in the week, members make more trips than casual riders, but with shorter duration, but where the number of trips are equitable over the weekend.
 
-We can visualise the above tibble with the following graphs:
+We can visualise the above tibble with the following graphs.
 
 ```
 wholeyeardata %>% 
@@ -345,6 +344,8 @@ wholeyeardata %>%
   <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_number.png">
 </p>
 
+The graph above shows that casual riders use the service more frequently over the weekends, and that members take many trips throughout the week. It should be noted that the members are almost twice as much as the casual riders, thus we can rather look at the average trip times to get a better idea of behaviour:
+
 ```
 wholeyeardata %>% 
   group_by(member_casual, day_of_week) %>% 
@@ -360,7 +361,9 @@ wholeyeardata %>%
   <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_average.png">
 </p>
 
-Through the following graphs, we can also see that
+Here we see that the casual riders use the service much longer on average.
+
+To get a more seasonal view of the data we can create the following graphs:
 
 ```
 wholeyeardata %>% 
@@ -375,6 +378,8 @@ wholeyeardata %>%
 <p align="center">
   <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_months1.png">
 </p>
+
+This is interesting - for both riders, the winter months in Chicago (December to March) are the months with the least amount of trips. This could be due to the harsh weather and snow, where casual riders would rather see the city by other means than bike, and commuters would rather carpool than freeze. In June, when the weather is as its hottest, the amount of trips also decreased.
 
 ```
 wholeyeardata %>% 
@@ -391,6 +396,8 @@ wholeyeardata %>%
   <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_months2.png">
 </p>
 
+Note here that for members, the average trip stays relatively constant, but that for casual riders, the times fluctuate. This could indicate that communters are more likely to be members, since they have to ride the same distance to work regardless of month, and thus the average time stays rather constant, whereas casual riders ride for longer in warmer months.
+
 <br/><br/>
 
 <a name="case1step5"></a>
@@ -403,13 +410,19 @@ counts <- aggregate(wholeyeardata$ride_length ~ wholeyeardata$member_casual + wh
 write.csv(counts, file = 'C:\\Users\\wicka\\Desktop\\Google Data Analytics certification\\Course 8 - Capstone project - Complete a case study\\Case Study 1\\Data used (working)\\avg_ride_length.csv')
 ```
 
+We can then create the following two graphs in Tableau to show to the executive team.
+
 <p align="center">
   <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_tab1.png">
 </p>
 
+From the above graph, we very clearly see how the average times differ between riders.
+
 <p align="center">
   <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs1_tab2.png">
 </p>
+
+And from this graph, we can see the tendency of ride times. Members' times are mostly constant with a slight increase over the weekends, but casual riders have a sharp decrease in the week, with a sharp increase over the weekend.
 
 <br/><br/>
 
@@ -418,9 +431,13 @@ write.csv(counts, file = 'C:\\Users\\wicka\\Desktop\\Google Data Analytics certi
 
 * **Final conclusion**
 
+It seems like casual members are more inclined towards leisure than commuting
+
 * **Applying these insights**
 
 * **Next steps to take**
+
+Consider weekend annual memberships
 
 * **Additional data to expand on findings**
 
