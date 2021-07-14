@@ -535,29 +535,39 @@ Since data has been collected on both casual riders and members, it is not skewe
 
 We can further use the ROCCC analysis as suggested by the course to see if the data is unbiased:
 
-- Reliable ✔️ - We are using the company's own data
-- Original ✔️ - Data used is internal, original copies
-- Comprehensive ✔️ - Contains enough attributes on cyclist info to be useful
-- Current ✔️ - We obtained data from the last 12 months
-- Cited ✔️ - We are using the company's own data
+- Reliable ✔️ - The company provided the data.
+- Original ✔️ - Data used is internal, original copies.
+- Comprehensive ✔️ - The data records values for both daily, minutely and hourly measurements, of intensities, calories, sleeps and steps.
+- Current ❌ - The data is from 2016, which is a while back, but since this is the data supplied for the case study, I'll give it a pseudo-✔️.
+- Cited ✔️ - The data obtained is from the company.
 
-Thus we can say that the data we have gathered is certain to be unbiased. The results obtained can thus be seen as credible.
-
+Thus we can say that the data we have gathered is mostly unbiased. The results obtained can thus be seen as credible.
 
 * **Licensing, privacy, security and accessibility**
 
 The data can be used under the following [public domain license](https://creativecommons.org/publicdomain/zero/1.0/).
 
+As is the requirement for creating a schema in SQL Developer, I had to create a user and password, so the data I am working with will be protected.
+
 * **Verifying the data's integrity**
+
+The data was generated in-house by the company. Replication errors won't be taken into account, since the data is sourced from the central database in the company, and the data engineers will have taken care to keep a safe original copy of the data, and furthermore protect the data from viruses.
+
+We can thus assume that the data has good integrity.
 
 * **How will the data help me answer the proposed question?**
 
 * **Problems found with the data**
 
+For some tables there are 33 entries, where for others there are as few as 8. This can be a problem when trying to compare different tracking measurements for the same user.
+
+There is also a lot of different data, and I don't know how relevant it will all be to the goal. Is daily, minutely and hourly measurements really necessary? We will see.
 
 <br/><br/>
 <a name="case2step3"></a>
 ### Step 3 - Cleaning and processing the data 🧹️
+
+
 
 <br/><br/>
 <a name="case2step4"></a>
