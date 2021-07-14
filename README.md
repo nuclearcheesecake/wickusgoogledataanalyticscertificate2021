@@ -474,7 +474,7 @@ My role in the company for now is to monitor how their customers user their smar
 
 * **The stakeholders and important players in this project**
 
-**Urška Sršen** - co-founder and chief creative officer - believes that analysing smart device fitness data could help the company grow.
+**Urška Sršen** - co-founder and chief creative officer - believes that analysing smart device fitness data could help the company grow. Background as an artist.
 
 **Bellabeat executive team** - the panel that I will present my findings to.
 
@@ -496,16 +496,31 @@ My role in the company for now is to monitor how their customers user their smar
 
 * **What problem am I trying to solve?**
 
+The goal of the company is to empower women using knowledge about their health and habits, while keeping in touch with style. They want to reach more women, and use traditional and digital media, but with a stronger focus on the digital, such as with their [website](https://bellabeat.com/). The digital media sources that they use are Google Search, Facebook, Instagram, Twitter, where they maintain active pages, and YouTube and the Google Display Network, where they run ads on campaign dates.
+
+My task is thus to analyse the smart device data provided to see how women are using them, and then suggest a marketing strategy.
+
 * **How can my insights drive business decisions?**
+
+With my analysis, I am aiming to find trends in smart device usage that would influence Bellabeat's marketing strategy. If Bellebeat can understand how, and by extension why, customers use their devices, they can craft advertisements that will appeal to likeminded users.
 
 <br/><br/>
 
 <a name="case2step2"></a>
 ### Step 2 - Obtaining the correct data 📜
 
-For this project, I will use data from June 2020 to May 2021, as this is the most recent data available at the time of analysis (July 2021). The data for this project is located in a [public data source](https://divvy-tripdata.s3.amazonaws.com/index.html). 
+For this project, I will use the following [dataset](https://www.kaggle.com/arashnic/fitbit) provided by the Kaggle user [Mobius](https://www.kaggle.com/arashnic). It contains a variety of wellness data gathered from **30 smart device users**.
 
 * **Storing and organising the data**
+
+For this project, I will be keeping an unaltered copy of the data as a backup as such:
+
+<p align="center">
+  <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs2_storage.png">
+</p>
+
+Then, for use, I will load the data as tables into SQL Developer:
+
 
 
 * **Bias and credibility**
@@ -524,6 +539,8 @@ Thus we can say that the data we have gathered is certain to be unbiased. The re
 
 
 * **Licensing, privacy, security and accessibility**
+
+The data can be used under the following [public domain license](https://creativecommons.org/publicdomain/zero/1.0/).
 
 * **Verifying the data's integrity**
 
