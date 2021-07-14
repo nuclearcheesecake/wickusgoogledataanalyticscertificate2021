@@ -455,9 +455,44 @@ I would like to know how the prices for trips are structured - per ride or per h
 
 (For the scenario supplied by Google, see [here](https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Case%20study%202/case2.pdf).)
 
+### Contents of Case Study 2
+
+* [Step 1 - Initial scenario investigation 👔](#case2step1)
+* [Step 2 - Obtaining the correct data 📜](#case2step2)
+* [Step 3 - Cleaning and processing the data 🧹️](#case2step3)
+* [Step 4 - Analysis 🕵️‍♂️](#case2step4)
+* [Step 5 - Visualisation and presentation ✨](#case2step5)
+* [Step 6 - Call to action 💡](#case2step6)
+<br/><br/>
+
+<a name="case2step1"></a>
 ### Step 1 - Initial scenario investigation 👔
 
+For this case study, I am a junior data analyst for **Bellabeat**, a high-tech manufacturer of health-focused products for women. I am working for the marketing analyst team. This company wants to become a lead player in the global smart device market.
+
+My role in the company for now is to monitor how their customers user their smart devices, and provide an analysis so that a new marketing campaign can be constructed. 
+
 * **The stakeholders and important players in this project**
+
+**Urška Sršen** - co-founder and chief creative officer - believes that analysing smart device fitness data could help the company grow.
+
+**Bellabeat executive team** - the panel that I will present my findings to.
+
+**Sando Mur** - cofounder and mathematician - key member of executive team.
+
+* **Products offered by Bellabeat**
+
+**Bellabeat app** - stores activity, sleep, stress, menstrual cycle and mindfulness habits of users - connects to smart device.
+
+**Wellness products** - Bellabeat provides the following three smart devices:
+
+1. **Leaf** - tracker that can be worn as a bracelet, necklace or clip - tracks activity, sleep and stress.
+
+2. **Time** - watch that tracks activity, sleep and stress.
+
+3. **Spring** - water bottle that tracks daily water intake - focuses on hydration levels.
+
+**Bellabeat membership** - subscription-based - gives users 24/7 access to personalised guidance on nutrition, activity, sleep, health and beauty, and mindfulness. Uses recorded lifestyles and goals.
 
 * **What problem am I trying to solve?**
 
@@ -465,6 +500,7 @@ I would like to know how the prices for trips are structured - per ride or per h
 
 <br/><br/>
 
+<a name="case2step2"></a>
 ### Step 2 - Obtaining the correct data 📜
 
 For this project, I will use data from June 2020 to May 2021, as this is the most recent data available at the time of analysis (July 2021). The data for this project is located in a [public data source](https://divvy-tripdata.s3.amazonaws.com/index.html). 
@@ -494,6 +530,23 @@ Thus we can say that the data we have gathered is certain to be unbiased. The re
 * **How will the data help me answer the proposed question?**
 
 * **Problems found with the data**
+
+
+<br/><br/>
+<a name="case2step3"></a>
+### Step 3 - Cleaning and processing the data 🧹️
+
+<br/><br/>
+<a name="case2step4"></a>
+### Step 4 - Analysis 🕵️‍♂️
+
+<br/><br/>
+<a name="case2step5"></a>
+### Step 5 - Visualisation and presentation ✨
+
+<br/><br/>
+<a name="case2step6"></a>
+### Step 6 - Call to action 💡
 
 
 <br/><br/>
