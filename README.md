@@ -15,13 +15,12 @@ This is due to the course having a strong focus on the methodology of data analy
 * Share, or creating visualisations and presentations
 * Act, or taking action with stakeholders given the new insights
 
-To complete the certificate, I had to design and complete a case study that implements this methodology, as was taught in the course. I had three options for the case study, but, in the interest of gaining more practice with my data analytics tools, I decided that all three are good applications to explore. Thus in this repositiory, you will find the following three case studies that I have completed using the methodology above:
+To complete the certificate, I had to design and complete a case study that implements this methodology, as was taught in the course. I had two options for the case study, but, in the interest of gaining more practice with my data analytics tools, I decided that both are good applications to explore. Thus in this repositiory, you will find the following case studies that I have completed using the methodology above:
 
 1. [Developing a new marketing strategy to increase influx of annual memberships at a bike-sharing company (with a focus on **Microsoft Excel** and **R**)](#case1)
-2. [Guide a marketing strategy based on how users interact with fitness smart devices (with a focus on **SQL**) - WORK IN PROGRESS](#case2)
-3. [Case study 3 (with a focus on **R**)  - WORK IN PROGRESS](#case3)
+2. [Guide a marketing strategy based on how users interact with fitness smart devices (with a focus on **SQL** and **R**) - WORK IN PROGRESS](#case2)
 
-The first two are theoretical case studies created by Google, and thus all the data was provided by them. For the last option, however, I had to find an alternative data source. Here follows my three case studies. As stated above, these case studies will implement the Google Data Analytics methodology. To further test out my toolset, I decided to attempt all 3 case studies with a primary focus on a singular tool (stated boldly in brackets above).
+The first two are theoretical case studies created by Google, and thus all the data was provided by them. Here follows my case studies. As stated above, these case studies will implement the Google Data Analytics methodology.
 
 <a name="case1"></a>
 ## Case Study 1 - Developing a new marketing strategy to increase influx of annual memberships at a bike-sharing company
@@ -431,15 +430,19 @@ And from this graph, we can see the tendency of ride times. Members' times are m
 
 * **Final conclusion**
 
-It seems like casual members are more inclined towards leisure than commuting
+It seems like casual members are more inclined towards leisure than commuting, since they take a long time with their trips on average, and are thus not in a rush to get to work. This can also be supported by the increase over the weekends. Members have a more constant time, regardless of the day.
 
-* **Applying these insights**
+We also saw that when the weather is too cold or too hot, the amount of trips for both types decreases.
 
 * **Next steps to take**
 
-Consider weekend annual memberships
+Using these insights, I would recommend that the executive team consider a weekend annual memberships - this way, the company still gets people to sign annual contracts, but with a package that might be more appealing to their behaviour.
+
+Other packages to be considered is summer packages, which, although not annual, still is a contract that will generate more income that solo rides, and maybe providing guided tours of the city or leisure activities.
 
 * **Additional data to expand on findings**
+
+I would like to know how the prices for trips are structured - per ride or per hour? That might further explain why casual riders ride for longer, to make the most of their trip, but also make less trips.
 
 <br/><br/>
 
@@ -494,31 +497,6 @@ Thus we can say that the data we have gathered is certain to be unbiased. The re
 
 
 <br/><br/>
-
-### Step 3 - Cleaning and processing the data 🧹️
-
-* **Dealing with missing data**
-
-* **Checking for entry errors**
-
-* **Removing duplicates**
-
-* **Calculated rows**
-
-
-
-<br/><br/>
-
-### Step 4 - Analysis 🕵️‍♂️
-<br/><br/>
-### Step 5 - Visualisation and presentation ✨
-<br/><br/>
-### Step 6 - Call to action 💡
-
-<br/><br/>
-
-<a name="case3"></a>
-## Case Study 3 - My own case study
 
 ## Conclusion
 
