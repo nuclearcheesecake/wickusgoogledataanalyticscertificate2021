@@ -20,7 +20,7 @@ To complete the certificate, I had to design and complete a case study that impl
 1. [Developing a new marketing strategy to increase influx of annual memberships at a bike-sharing company (with a focus on **Microsoft Excel** and **R**)](#case1)
 2. [Guide a marketing strategy based on how users interact with fitness smart devices (with a focus on **SQL** and **R**) - WORK IN PROGRESS](#case2)
 
-The first two are theoretical case studies created by Google, and thus all the data was provided by them. Here follows my case studies. As stated above, these case studies will implement the Google Data Analytics methodology.
+These two are theoretical case studies created by Google, and thus all the data was provided by them. Here follows my case studies. As stated above, these case studies will implement the Google Data Analytics methodology.
 
 <a name="case1"></a>
 ## Case Study 1 - Developing a new marketing strategy to increase influx of annual memberships at a bike-sharing company
