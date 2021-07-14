@@ -521,7 +521,13 @@ For this project, I will be keeping an unaltered copy of the data as a backup as
 
 Then, for use, I will load the data as tables into SQL Developer:
 
+<p align="center">
+  <img width="825" src="https://github.com/nuclearcheesecake/wickusgoogledataanalyticscertificate2021/blob/main/Misc/cs2_tables.png">
+</p>
 
+As can be seen above, the tables are named firstly according to the **type** of data they represent, then the **unit of time** or frequency in which the data was measured, and then any further **distinguishing features** of the data.
+
+In the case of **SLEEP_MINUTES** and **WEIGHTLOG_COMPLETE**, the name of the *date* column was changed to *daterecorded* to abide by SQL Developer's rules.
 
 * **Bias and credibility**
 
